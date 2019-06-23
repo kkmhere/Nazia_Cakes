@@ -40,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+
 
     }
 
