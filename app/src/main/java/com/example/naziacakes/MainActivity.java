@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.material.navigation.NavigationView;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -30,18 +32,54 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-                Toast.makeText(MainActivity.this,"OPENED",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this,"OPENED",Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
-                Toast.makeText(MainActivity.this,"CLOSED",Toast.LENGTH_SHORT).show();
+               // Toast.makeText(MainActivity.this,"CLOSED",Toast.LENGTH_SHORT).show();
             }
         };
 
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
+
+        NavigationView navigationView=(NavigationView)findViewById(R.id.myNavigation);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                drawerLayout.closeDrawers();
+                switch (menuItem.getItemId())
+                {
+                    case R.id.myorders:
+                        Toast.makeText(MainActivity.this,"Orders",Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case R.id.myaddr:
+                        Toast.makeText(MainActivity.this,"Addresses",Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case R.id.editProfile:
+                        Toast.makeText(MainActivity.this,"EDITING",Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case R.id.trackOrder:
+                        Toast.makeText(MainActivity.this,"TRACK ORDER",Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case R.id.mwallet:
+                        Toast.makeText(MainActivity.this,"MY WALLET",Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case R.id.logout:
+                        Toast.makeText(MainActivity.this,"LOGOUT",Toast.LENGTH_SHORT).show();
+                }
+
+
+                return false;
+            }
+        });
 
 
     }
@@ -67,4 +105,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
