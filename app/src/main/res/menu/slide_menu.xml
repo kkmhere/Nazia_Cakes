@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/myorders"
+        android:icon="@drawable/myorders"
+        android:title="My Orders"/>
+
+
+    <item android:id="@+id/myaddr"
+        android:icon="@drawable/address"
+        android:title="My Addresses"/>
+
+    <item android:id="@+id/editProfile"
+        android:icon="@drawable/editaccount"
+        android:title="Edit Profile"/>
+
+
+    <item android:id="@+id/trackOrder"
+        android:icon="@drawable/track"
+        android:title="Track Order"/>
+
+    <item android:id="@+id/mwallet"
+        android:icon="@drawable/wallet"
+        android:title="My Wallet"/>
+
+    <item android:id="@+id/logout"
+        android:icon="@drawable/logout"
+        android:title="Logout"/>
+
+
+
+
+</menu>

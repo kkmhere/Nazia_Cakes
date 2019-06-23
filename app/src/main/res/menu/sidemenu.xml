@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/cart"
+        android:title="CART"
+        android:icon="@drawable/ic_add_shopping_cart_48px"
+        app:showAsAction="ifRoom"/>
+
+
+    <item android:id="@+id/profile"
+        android:title="PROFILE"
+        android:icon="@drawable/ic_account_circle_black_24dp"
+        app:showAsAction="ifRoom"/>
+
+</menu>
