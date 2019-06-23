@@ -43,7 +43,7 @@
         android:layout_margin="10dp"
         android:layout_marginTop="50dp"
         android:background="#ffbb00"
-        android:text="LOGIN" />
+        android:text="LOGIN"/>
 
     <TextView
         android:id="@+id/forget"
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="serif"
-        android:onClick="forgetPassword"
+        android:onClick="forget"
         android:text="Forget Your Password?"
         android:textAlignment="center"
         android:textColor="#ffff00" />

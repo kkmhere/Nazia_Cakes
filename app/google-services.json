@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "254293744559",
+    "firebase_url": "https://naziacakes.firebaseio.com",
+    "project_id": "naziacakes",
+    "storage_bucket": "naziacakes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254293744559:android:d9ab8d291b87315a",
+        "android_client_info": {
+          "package_name": "com.example.naziacakes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254293744559-j8eea844129v6fvm05c0dm96cbhegn2b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.naziacakes",
+            "certificate_hash": "958d5745371b958db8d656522636e06ab2261ba8"
+          }
+        },
+        {
+          "client_id": "254293744559-fmgr6eounjq3e9859s60u0qlgdc9qmfi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDttYSPGH63gxbHATSqHBoReW3NqEIYWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254293744559-fmgr6eounjq3e9859s60u0qlgdc9qmfi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

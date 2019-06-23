@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:orientation="vertical"
+    android:background="#bcaaa4">
+
+    <ImageView
+        android:id="@+id/Icon"
+        android:layout_width="130dp"
+        android:layout_height="156dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="40dp"
+        tools:srcCompat="@mipmap/ic_launcher" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/FirstName"
+        android:hint="First Name"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LastName"
+        android:hint="Last Name"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editEmailID"
+        android:hint="Email ID"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Enter Password"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="15dp"
+        android:background="#ffbb00"
+        android:text="REGISTER" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="login"
+        android:text="Already Registered!! Sign In"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+        android:fontFamily="monospace"/>
+
+
+
+
+</LinearLayout>
