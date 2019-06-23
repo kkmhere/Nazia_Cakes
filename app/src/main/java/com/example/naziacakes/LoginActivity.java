@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void forget(View view){
 
-        startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
+        startActivity(new Intent(LoginActivity.this,ForgetActivity.class));
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {

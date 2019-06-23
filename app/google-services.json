@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "254293744559-4uncn1buf8u6icvl7bp9p8cqj5dp1ltn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.naziacakes",
+            "certificate_hash": "e7bed90bd19c240e278478302fa522345fae5988"
+          }
+        },
+        {
           "client_id": "254293744559-j8eea844129v6fvm05c0dm96cbhegn2b.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
