@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,12 +18,33 @@ import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
 
+public class MainActivity extends AppCompatActivity {
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter recyclerViewAapter;
+    private List<Cakes> cakesList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        recyclerView=(RecyclerView)findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+        cakesList=new ArrayList<>();
+
+        for(int index=0;index<20;index++)
+        {
+            Cakes mycakes=new Cakes("KESHAV"+index,"PILOT");
+            cakesList.add(mycakes);
+
+        }
+
+        recyclerViewAapter =new recyclerViewAdapter(cakesList,MainActivity.this);
+        recyclerView.setAdapter(recyclerViewAapter);
+
         FragmentTransaction fragmentTransaction;
 
         Toolbar toolbar=(Toolbar)findViewById(R.id.mytoolbar);
