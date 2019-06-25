@@ -17,6 +17,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,10 +27,21 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recyclerViewAapter;
     private List<Cakes> cakesList;
+    private FirebaseAuth mAuth;
+    FirebaseUser currentUser;
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+         currentUser = mAuth.getCurrentUser();
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mAuth = FirebaseAuth.getInstance();
 
         recyclerView=(RecyclerView)findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
@@ -125,6 +138,8 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.logout:
                         //Toast.makeText(MainActivity.this,"LOGOUT",Toast.LENGTH_SHORT).show();
+                        mAuth.signOut();
+                        Toast.makeText(MainActivity.this,"SUCCESS",Toast.LENGTH_SHORT).show();
                         Intent intent=new Intent(MainActivity.this,LoginActivity.class);
                         startActivity(intent);
                 }

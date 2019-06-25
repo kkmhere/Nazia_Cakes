@@ -48,6 +48,14 @@
         android:background="@drawable/rounded_button"
         android:text="LOGIN"
         android:textSize="15sp"/>
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/SignInbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp">
+    </com.google.android.gms.common.SignInButton>
 
     <TextView
         android:id="@+id/forget"
