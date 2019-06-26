@@ -8,16 +8,16 @@ public class Member {
         return Fname;
     }
 
-    public void setFname(String fname) {
-        Fname = fname;
+    public void setFname(String fName) {
+       this.Fname = fName;
     }
 
     public String getLName() {
         return LName;
     }
 
-    public void setLName(String LName) {
-        this.LName = LName;
+    public void setLName(String lName) {
+        this.LName = lName;
     }
 
     public Member() {
