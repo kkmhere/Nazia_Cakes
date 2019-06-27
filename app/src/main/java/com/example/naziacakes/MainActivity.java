@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -28,21 +29,29 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.Adapter recyclerViewAapter;
     private List<Cakes> cakesList;
     private FirebaseAuth mAuth;
-    FirebaseUser currentUser;
+    FirebaseUser currentUser,currentUserMain;
+
+    TextView headername;
+    String headerName;
 
     @Override
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
          currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            Toast.makeText(MainActivity.this,currentUser.getUid(),Toast.LENGTH_SHORT).show();
 
+
+        }
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mAuth = FirebaseAuth.getInstance();
 
+        mAuth = FirebaseAuth.getInstance();
+        currentUserMain=mAuth.getCurrentUser();
         recyclerView=(RecyclerView)findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
@@ -98,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction.replace(R.id.container1,myFragmentClass);
                         fragmentTransaction.addToBackStack(null);
                         fragmentTransaction.commit();
+                        recyclerView.setVisibility(View.INVISIBLE);
                         break;
 
                     case R.id.myaddr:
@@ -107,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction.replace(R.id.container1,addrFragment);
                         fragmentTransaction.addToBackStack(null);
                         fragmentTransaction.commit();
+                        recyclerView.setVisibility(View.INVISIBLE);
                         break;
 
                     case R.id.editProfile:
@@ -116,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction.replace(R.id.container1,editFragment);
                         fragmentTransaction.addToBackStack(null);
                         fragmentTransaction.commit();
+                        recyclerView.setVisibility(View.INVISIBLE);
                         break;
 
                     case R.id.trackOrder:
@@ -125,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction.replace(R.id.container1,trackFragment);
                         fragmentTransaction.addToBackStack(null);
                         fragmentTransaction.commit();
+                        recyclerView.setVisibility(View.INVISIBLE);
                         break;
 
                     case R.id.mwallet:
@@ -134,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction.replace(R.id.container1,walletFragment);
                         fragmentTransaction.addToBackStack(null);
                         fragmentTransaction.commit();
+                        recyclerView.setVisibility(View.INVISIBLE);
                         break;
 
                     case R.id.logout:
@@ -142,6 +156,12 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this,"SUCCESS",Toast.LENGTH_SHORT).show();
                         Intent intent=new Intent(MainActivity.this,LoginActivity.class);
                         startActivity(intent);
+                        break;
+
+                    case R.id.home:
+                        recyclerView.setVisibility(View.VISIBLE);
+                        Intent intent2=new Intent(MainActivity.this,MainActivity.class);
+                        startActivity(intent2);
                 }
 
 

@@ -7,15 +7,14 @@
         android:id="@+id/navigationHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:gravity="left"
-        android:paddingBottom="8dp"
         android:paddingLeft="16dp"
         android:paddingTop="16dp"
-        android:layout_marginTop="16dp"
-        android:text="NAME"
+        android:paddingBottom="8dp"
         android:textColor="#009900"
         android:textSize="14sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/subheader"
